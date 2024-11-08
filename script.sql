@@ -1,3 +1,5 @@
+DROP TABLE client, voiture, fournisseur, concession, location, historique;
+
 CREATE TABLE client (
   id numeric(4) PRIMARY KEY,
   nom varchar(50),
@@ -6,6 +8,8 @@ CREATE TABLE client (
   dateNaiss date,
   tel varchar(15),
   adresse varchar(255),
+  departement numeric(2),
+  pays varchar(30),
   entreprise boolean,
   historique_id numeric(6) REFERENCES Historique(id)
 );
@@ -15,7 +19,8 @@ CREATE TABLE voiture (
   marque varchar(30),
   modele varchar(30),
   annee numeric(4),
-  prix_journalier numeric(3,2),
+  prix_journalierHT numeric(3,2),
+  prix_journalierTTC numeric(3,2),
   typeVoiture varchar(30),
   kilometrage numeric(7),
   concession_id varchar(30) REFERENCES concession(ville),
@@ -44,7 +49,7 @@ CREATE TABLE location (
   PRIMARY KEY (client_id, voiture_id, debut)
 );
 
-CREATE TABLE Historique (
+CREATE TABLE historique (
   id numeric(6),
   dateInscription date,
   nbrVoitureLoue numeric(3)
