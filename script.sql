@@ -52,7 +52,7 @@ CREATE TABLE location (
   voiture_id numeric REFERENCES voiture(id),
   debut date NOT NULL,
   fin date NOT NULL,
-  coutTotal numeric(5,2) NOT NULL,
+  coutTotal numeric(7,2) NOT NULL,
   PRIMARY KEY (client_id, voiture_id, debut),
   CHECK (fin > debut)
 );
