@@ -38,12 +38,13 @@ CREATE TABLE voiture (
   marque varchar(30) NOT NULL,
   modele varchar(30) NOT NULL,
   annee numeric(4) NOT NULL,
-  prix_journalierHT numeric(5,3) NOT NULL,
-  prix_journalierTTC numeric(5,3) NOT NULL,
+  prix_journalierHT numeric(6,3) NOT NULL,
+  prix_journalierTTC numeric(6,3) NOT NULL,
   typeVoiture varchar(30),
   kilometrage numeric(7) NOT NULL, -- a modifier aprés chaque location
   concession_id varchar(30) REFERENCES concession(ville) NOT NULL,
   fournisseur_id varchar(30) REFERENCES fournisseur(entreprise)
+  caution numeric(6,3) NOT NULL
 );
 
 CREATE TABLE location (

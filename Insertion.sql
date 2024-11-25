@@ -1,40 +1,52 @@
 -- INSERT valides
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise)
-VALUES (1, 'Martin', 'Jean', 'jean.martin@example.com', '1985-06-15', '0612345678', '10 rue de Paris', 63, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0001, 'Martin', 'Jean', 'jean.martin@example.com', '1985-06-15', '0612345678', '10 rue de Paris', 63, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0002, 'Halilou', 'Sami', 'sami.halilou@example.com', '1993-02-02', '0612345678', '32 Rue de la roue', 75, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0003, 'Durant', 'Benjamin', 'benjamin.durant@example.com', '1996-10-26', '0612345678', '24 Rue des meuniers', 35, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0004, 'Rousso', 'Anthony', 'anthony.rousso@example.com', '2000-06-21', '0612345678', '63 BD lafayette', 32, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0005, 'Blanc', 'Quentin', 'quentin.bland@example.com', '1974-12-25', '0612345678', '10 rue de neige', 14, 'France', false);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise) VALUES (0006, 'Dupont', 'Marie', 'marie.dupont@example.com', '1990-09-20', '0654321098', '20 avenue des Champs', 28, 'France', false);
 
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise)
-VALUES (2, 'Dupont', 'Marie', 'marie.dupont@example.com', '1990-09-20', '0654321098', '20 avenue des Champs', 75, 'France', false);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (001, 'Audi', 'R8', 2022, 800.00, 960.00, 'Supercar', 15000, 'Paris', 'Audi', 8000.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (002, 'BMW', 'M4', 2020, 400.00, 480.00, 'Coupe', 25000, 'Paris', 'BMW', 3500.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (003, 'Mercedes-Benz', 'C63 AMG', 2021, 430.00, 516.00, 'Berline', 18200, 'Clermont-Ferrand', NULL, 3000.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (004, 'Audi', 'RS7', 2020, 500.00, 600.00, 'Berline', 32000, 'Clermont-Ferrand', 'Audi', 6000.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (005, 'BMW', 'M3', 2023, 400.00, 476.00, 'Berline', 9530, 'Berlin', 'BMW', 2500.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (005, 'Tesla', 'Roadster', 2024, 1400.00, 1666.00, 'Coupe Electrique', 3000, 'Berlin', NULL, 12000.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (005, 'Mercedes-Benz', 'G63', 2023, 900.00, 978.75, 'SUV', 12000, 'Los Angeles', NULL, 10000.00);
+INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id, caution) VALUES (005, 'Porsche', 'Cayenne', 2024, 600.00, 652.50, 'SUV', 8000, 'Los Angeles', 'Wolkswagen', 8000.00);
 
-INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id)
-VALUES (101, 'Renault', 'Clio', 2020, 35.00, 42.00, 'Citadine', 5000, 'Paris', 'Renault France');
+INSERT INTO fournisseur (entreprise, tel, email, siege_social) VALUES ('Audi', '+4930123456789', 'contact@audi.de', 'Ingolstadt');
+INSERT INTO fournisseur (entreprise, tel, email, siege_social) VALUES ('BMW', '+4989987654321', 'contact@bmw.de', 'Munich');
+INSERT INTO fournisseur (entreprise, tel, email, siege_social) VALUES ('Wolkswagen', '+4940112233445', 'contact@wolkswagen.de', 'Wolfsbourg');
 
-INSERT INTO voiture (id, marque, modele, annee, prix_journalierHT, prix_journalierTTC, typeVoiture, kilometrage, concession_id, fournisseur_id)
-VALUES (102, 'Peugeot', '208', 2019, 30.00, 36.00, 'Citadine', 10000, 'Lyon', 'Peugeot France');
+INSERT INTO concession (ville, pays, nb_employes) VALUES ('Paris', 'France', 15);
+INSERT INTO concession (ville, pays, nb_employes) VALUES ('Clermont-Ferrand', 'France', 8);
+INSERT INTO concession (ville, pays, nb_employes) VALUES ('Berlin', 'Allemagne', 12);
+INSERT INTO concession (ville, pays, nb_employes) VALUES ('Los Angeles', 'Etats-Unis', 20);
 
-INSERT INTO fournisseur (entreprise, tel, email, siege_social)
-VALUES ('Renault France', '0145678901', 'contact@renault.fr', 'Boulogne-Billancourt');
+INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0001, 001, '2023-11-01', '2023-11-10', 420.00);
+INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0002, 002, '2023-11-05', '2023-11-12', 252.00);
 
-INSERT INTO fournisseur (entreprise, tel, email, siege_social)
-VALUES ('Peugeot France', '0145678902', 'contact@peugeot.fr', 'Paris');
+INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1001, '2023-01-01', 5);
+INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1002, '2023-02-15', 3);
+INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1003, '2023-01-01', 5);
+INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1004, '2023-01-01', 5);
 
-INSERT INTO concession (ville, pays, nb_employes)
-VALUES ('Paris', 'France', 15);
+UPDATE TABLE client
+Set historique_id = 1001
+WHERE id = 0001;
 
-INSERT INTO concession (ville, pays, nb_employes)
-VALUES ('Lyon', 'France', 10);
+UPDATE TABLE client
+Set historique_id = 1002
+WHERE id = 0002;
 
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal)
-VALUES (1, 101, '2023-11-01', '2023-11-10', 420.00);
+UPDATE TABLE client
+Set historique_id = 1003
+WHERE id = 0003;
 
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal)
-VALUES (2, 102, '2023-11-05', '2023-11-12', 252.00);
-
-INSERT INTO historique (id, dateInscription, nbrVoitureLoue)
-VALUES (1001, '2023-01-01', 5);
-
-INSERT INTO historique (id, dateInscription, nbrVoitureLoue)
-VALUES (1002, '2023-02-15', 3);
-
+UPDATE TABLE client
+Set historique_id = 1004
+WHERE id = 0004;
 
 -- INSERT QUI DOIVENT PAS FONCTIONNE
 INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id)
