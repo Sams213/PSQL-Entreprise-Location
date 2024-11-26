@@ -24,10 +24,10 @@ INSERT INTO concession (ville, pays, nb_employes) VALUES ('Clermont-Ferrand', 'F
 INSERT INTO concession (ville, pays, nb_employes) VALUES ('Berlin', 'Allemagne', 12);
 INSERT INTO concession (ville, pays, nb_employes) VALUES ('Los Angeles', 'Etats-Unis', 20);
 
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0001, 001, '2024-11-03', '2023-11-05', 2880.00);
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0002, 005, '2024-06-09', '2023-06-12', 1904.00);
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0006, 008, '2024-07-21', '2023-07-27', 4564.00);
-INSERT INTO location (client_id, voiture_id, debut, fin, coutTotal) VALUES (0002, 003, '2024-10-15', '2023-10-17', 1548.00);
+INSERT INTO location (client_id, voiture_id, debut, fin) VALUES (0001, 001, '2024-11-03', '2023-11-05');
+INSERT INTO location (client_id, voiture_id, debut, fin) VALUES (0002, 005, '2024-06-09', '2023-06-12');
+INSERT INTO location (client_id, voiture_id, debut, fin) VALUES (0006, 008, '2024-07-21', '2023-07-27');
+INSERT INTO location (client_id, voiture_id, debut, fin) VALUES (0002, 003, '2024-10-15', '2023-10-17');
 
 INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1001, '2023-01-01', 1);
 INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1002, '2023-02-15', 1);
