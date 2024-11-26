@@ -26,6 +26,8 @@ CREATE TABLE concession (
   nb_employes numeric(2)
 );
 
+
+
 CREATE TABLE voiture (
   id numeric(3) PRIMARY KEY,
   marque varchar(30) NOT NULL,
