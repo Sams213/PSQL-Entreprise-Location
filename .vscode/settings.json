@@ -1,14 +1,24 @@
 {
-    "sqltools.connections": [
-        {
-            "previewLimit": 50,
-            "server": "londres",
-            "port": 5432,
-            "askForPassword": true,
-            "driver": "PostgreSQL",
-            "name": "ghjabbour",
-            "database": "dbghjabbour",
-            "username": "ghjabbour"
-        }
-    ]
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "londres",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "ghjabbour",
+      "database": "dbghjabbour",
+      "username": "ghjabbour"
+    },
+    {
+      "previewLimit": 50,
+      "server": "londres",
+      "port": 5432,
+      "askForPassword": true,
+      "driver": "PostgreSQL",
+      "name": "Moi",
+      "database": "dbsahalilou",
+      "username": "sahalilou"
+    }
+  ]
 }

@@ -4,11 +4,11 @@ INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1002, '2023
 INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1003, '2023-01-01', 1);
 INSERT INTO historique (id, dateInscription, nbrVoitureLoue) VALUES (1004, '2023-01-01', 1);
 
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0001, 'Martin', 'Jean', 'jean.martin@example.com', '1985-06-15', '0612345678', '10 rue de Paris', 63, 'France', false, 1001);
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0002, 'Halilou', 'Sami', 'sami.halilou@example.com', '1993-02-02', '0612345678', '32 Rue de la roue', 75, 'France', false, 1002);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, historique_id) VALUES (0001, 'Martin', 'Jean', 'jean.martin@example.com', '1985-06-15', '0612345678', '10 rue de Paris', 63, 'France', 1001);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, historique_id) VALUES (0002, 'Halilou', 'Sami', 'sami.halilou@example.com', '1993-02-02', '0612345678', '32 Rue de la roue', 75, 'France', 1002);
 INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0003, 'Durant', 'Benjamin', 'benjamin.durant@example.com', '1996-10-26', '0614545678', '24 Rue des meuniers', 32, 'France', true, NULL);
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0004, 'Rousso', 'Anthony', 'anthony.rousso@example.com', '2000-06-21', '0612346668', '63 BD lafayette', 63, 'France', false, 1003);
-INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0005, 'Smith', 'Bob', 'bob.smith@example.com', '1974-12-25', '0654824578', '10 main street', 99, 'USA', false, NULL);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, historique_id) VALUES (0004, 'Rousso', 'Anthony', 'anthony.rousso@example.com', '2000-06-21', '0612346668', '63 BD lafayette', 63, 'France', 1003);
+INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, historique_id) VALUES (0005, 'Smith', 'Bob', 'bob.smith@example.com', '1974-12-25', '0654824578', '10 main street', 99, 'USA', NULL);
 INSERT INTO client (id, nom, prenom, mail, dateNaiss, tel, adresse, departement, pays, entreprise, historique_id) VALUES (0006, 'Fischer', 'Hans', 'hans.fischer@example.com', '1990-09-20', '0654321098', 'Anita-Wiegand-Gasse 77c', 99, 'Germany', true, 1004);
 
 INSERT INTO fournisseur (entreprise, tel, email, siege_social) VALUES ('Audi', '+4930123456789', 'contact@audi.de', 'Ingolstadt');

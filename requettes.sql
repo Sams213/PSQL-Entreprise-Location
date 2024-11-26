@@ -17,6 +17,7 @@ select DISTINCT c.pays
 from client c;
 
 --4. Pour un fournisseur de votre choix, lister les produits qu’il fournit ainsi que leur prix de location hors taxe (HT) et taxes comprises (TTC)
+
 select v.marque, v.modele, v.typeVoiture, v.prix_journalierHT AS prix_HT,
        v.prix_journalierTTC AS prix_TTC
 from voiture v
@@ -24,17 +25,20 @@ join fournisseur f ON v.fournisseur_id = f.entreprise
 where f.entreprise = 'BMW';
 
 --5. Y a-t-il des articles qui n’ont jamais été loués ? Si oui, lesquels ?
+
 SELECT DISTINCT v.marque, v.modele, v.typeVoiture
 FROM voiture v
-WHERE v.id NOT IN (select l.voiture_id from location l);
+WHERE v.id NOT IN (select l.voiture_id from location l where l.debut < CURRENT_DATE);
 
 --6. Quel est le produit le plus cher ?
+
 SELECT v.marque, v.modele, v.prix_journalierht, v.prix_journalierTTC
 FROM voiture v
 ORDER BY v.prix_journalierTTC DESC
 LIMIT 1;
 
---Le moins cher
+-- Le moins cher
+
 SELECT v.marque, v.modele, v.prix_journalierht, v.prix_journalierTTC
 FROM voiture v
 ORDER BY v.prix_journalierTTC ASC
