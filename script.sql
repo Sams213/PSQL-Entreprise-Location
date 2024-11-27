@@ -1,4 +1,6 @@
-DROP TABLE location, voiture, concession, fournisseur, client, historique;
+DROP TABLE 
+location, voiture, pays, concession, 
+fournisseur, client;
 
 CREATE TABLE client (
   id numeric(4) PRIMARY KEY,
@@ -9,7 +11,7 @@ CREATE TABLE client (
   tel varchar(15) NOT NULL,
   adresse varchar(255) NOT NULL,
   departement numeric(2) default 99,
-  pays varchar(30) NOT NULL,
+  pays varchar(30),
   entreprise boolean default false
 );
 
@@ -20,13 +22,17 @@ CREATE TABLE fournisseur (
   siege_social varchar(30)
 );
 
-CREATE TABLE concession (
-  ville varchar(30) PRIMARY KEY,
-  pays varchar(20) NOT NULL,
-  nb_employes numeric(2)
+CREATE TABLE pays (
+  nom varchar(30) PRIMARY KEY,
+  taxe numeric (4,2)
 );
 
-
+CREATE TABLE concession (
+  ville varchar(30),
+  pays varchar(20) REFERENCES pays.nom,
+  nb_employes numeric(2),
+  PRIMARY KEY(ville, pays)
+);
 
 CREATE TABLE voiture (
   id numeric(3) PRIMARY KEY,
