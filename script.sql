@@ -28,10 +28,9 @@ CREATE TABLE pays (
 );
 
 CREATE TABLE concession (
-  ville varchar(30),
-  pays varchar(20) REFERENCES pays.nom,
-  nb_employes numeric(2),
-  PRIMARY KEY(ville, pays)
+  ville varchar(30) PRIMARY KEY,
+  pays varchar(20) REFERENCES pays(nom),
+  nb_employes numeric(2)
 );
 
 CREATE TABLE voiture (
@@ -40,11 +39,10 @@ CREATE TABLE voiture (
   modele varchar(30) NOT NULL,
   annee numeric(4) NOT NULL,
   prix_journalierHT numeric(7,2) NOT NULL,
-  prix_journalierTTC numeric(7,2) NOT NULL,
   typeVoiture varchar(30),
-  kilometrage numeric(7) NOT NULL, -- a modifier aprés chaque location
-  concession_id varchar(30) REFERENCES concession(ville) NOT NULL,
-  fournisseur_id varchar(30) REFERENCES fournisseur(entreprise),
+  kilometrage numeric(7), -- a modifier aprés chaque location
+  concession_ville varchar(30) REFERENCES concession(ville) NOT NULL,
+  fournisseur_id varchar(30) REFERENCES fournisseur(entreprise) default NULL,
   caution numeric(8,2) NOT NULL
 );
 

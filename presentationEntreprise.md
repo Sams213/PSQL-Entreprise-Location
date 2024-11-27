@@ -5,7 +5,7 @@
 L’entreprise est une entreprise de location de voitures basés à Clermont-Ferrand, on opére en France et dans plusieurs autres pays dans le monde (UE et hors UE), avec 4 magasins situés à :
 
 - Clermont-Ferrand
-- Los Angeles
+- Moscou
 - Paris
 - Berlin
 
